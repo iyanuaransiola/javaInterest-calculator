@@ -1,0 +1,16 @@
+body{
+    background-color: aqua;
+}
+
+h2{
+    text-align: center;
+}
+
+#time{
+    width: 550px;
+}
+#txt{
+   width : 800px;
+   background-color: gainsboro !important;
+   border-radius: 25px !important;
+}

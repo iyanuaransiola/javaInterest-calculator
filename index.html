@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Interest Decoder</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+          <span class="navbar-brand mb-0 h1">Loan Interest Decoder</span>
+        </div>
+      </nav>
+    
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6">
+            <h2>Loan Rate Form</h2>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <form action="#"></form>
+                <div class="form-group">
+                    <label for="principal">Enter the principal amount here:</label>
+                    <input type="text1" id="principal" placeholder="Please enter the principal amount"
+                     class="form-control" onmouseover="changeBgColor(this, 'rgb(187, 211, 228)')" onmouseout="changeBgColor(this, 'white')">
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="rate">Enter Loan rate here:</label>
+                        <input type="text2" id="rate" placeholder="Please enter Loan rate" class="form-control" onmouseover="changeBgColor(this, 'rgb(187, 211, 228)')" onmouseout="changeBgColor(this, 'white')">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="time">Enter your time here:</label>
+                <input type="number" id="time" placeholder="Please enter the time here" class="form-control" onmouseover="changeBgColor(this, 'rgb(187, 211, 228)')" onmouseout="changeBgColor(this, 'white')">
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <p>Click down below to calculate:</p>
+                <button id="btn" onmouseover="changeBgColor(this, 'rgb(187, 211, 228)')" onmouseout="changeBgColor(this, 'white')">Calculate</button>
+            </div>
+
+          <div class="row bg-dark" id="txt">
+            <div class="col-md-12 bg-dark">
+                <h1>Result:</h1>
+            </div>
+          </div>
+    </section>
+
+    <script>
+
+        let principle = document.getElementById("principal").value;
+        let rate = document.getElementById("rate").value;
+        let time = document.getElementById("time").value;
+
+        btn.addEventListener ("click", calculateInterest);
+
+        function calculateInterest() {
+            let result = (principle * rate * time) / 100;
+            document.getElementById("txt").innerHTML = `Simple interest is: &#8358; ${result}`;
+
+        }
+
+        function changeBgColor(element, bgColor) {
+            element.style.backgroundColor = bgColor;
+        }
+        
+    </script>
+</body>
+</html>
